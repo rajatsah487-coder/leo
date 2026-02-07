@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MESSI | Beyond Football</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#070b1d;
+  --card:#0f1638;
+  --neon:#00f7ff;
+  --pink:#ff3cac;
+  --yellow:#f9d423;
+  --text:#ffffff;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Montserrat,sans-serif;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+}
+
+/* HERO VIDEO */
+.hero{
+  position:relative;
+  height:100vh;
+}
+.hero iframe{
+  width:100%;
+  height:100%;
+  border:none;
+  filter:brightness(.35);
+}
+.hero-text{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.hero-text h1{
+  font-size:4.5rem;
+  background:linear-gradient(90deg,var(--neon),var(--pink),var(--yellow));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.hero-text p{
+  font-size:1.4rem;
+  opacity:.9;
+}
+
+/* SECTIONS */
+.section{
+  padding:90px 8%;
+}
+
+.title{
+  font-size:2.6rem;
+  margin-bottom:30px;
+  background:linear-gradient(90deg,var(--yellow),var(--neon));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* STORY GRID */
+.story{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
+.box{
+  background:linear-gradient(160deg,var(--card),#0a0f2e);
+  padding:30px;
+  border-radius:20px;
+  transition:.5s;
+}
+.box:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 60px rgba(0,247,255,.15);
+}
+
+/* STATS */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:20px;
+}
+.stat{
+  text-align:center;
+}
+.stat h2{
+  font-size:3rem;
+  color:var(--neon);
+}
+
+/* GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:25px;
+}
+.gallery img{
+  width:100%;
+  height:360px;
+  object-fit:cover;
+  border-radius:25px;
+  transition:.6s;
+}
+.gallery img:hover{
+  transform:scale(1.08) rotate(-1deg);
+}
+
+/* FULL VIDEO */
+.full-video iframe{
+  width:100%;
+  height:480px;
+  border-radius:25px;
+  border:none;
+}
+
+/* FOOTER */
+footer{
+  padding:50px;
+  text-align:center;
+  opacity:.8;
+}
+
+@media(max-width:768px){
+  .hero-text h1{font-size:2.8rem}
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO SCREENSAVER VIDEO -->
+<section class="hero">
+<iframe
+src="https://www.youtube.com/embed/PSanJ5swYBM?autoplay=1&mute=1&loop=1&playlist=PSanJ5swYBM&controls=0"
+allow="autoplay">
+</iframe>
+
+<div class="hero-text">
+  <h1>LIONEL MESSI</h1>
+  <p>Beyond statistics. Beyond comparison.</p>
+</div>
+</section>
+
+<!-- STORY -->
+<section class="section">
+<h2 class="title">The Story</h2>
+<div class="story">
+  <div class="box">
+    From Rosario to Barcelona, Messi’s journey began with belief
+    when nobody else did.
+  </div>
+  <div class="box">
+    He didn’t change football by power, but by intelligence,
+    balance, and creativity.
+  </div>
+  <div class="box">
+    World Cup 2022 was not a win.
+    It was destiny fulfilled.
+  </div>
+</div>
+</section>
+
+<!-- STATS -->
+<section class="section">
+<h2 class="title">By The Numbers</h2>
+<div class="stats">
+  <div class="box stat"><h2>8</h2><p>Ballon d'Or</p></div>
+  <div class="box stat"><h2>800+</h2><p>Goals</p></div>
+  <div class="box stat"><h2>45+</h2><p>Trophies</p></div>
+  <div class="box stat"><h2>1000+</h2><p>Games</p></div>
+</div>
+</section>
+
+<!-- GALLERY -->
+<section class="section">
+<h2 class="title">Moments</h2>
+<div class="gallery">
+  <img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d">
+  <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2">
+  <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b">
+</div>
+</section>
+
+<!-- HIGHLIGHT -->
+<section class="section">
+<h2 class="title">Magic in Motion</h2>
+<div class="full-video">
+<iframe
+src="https://www.youtube.com/embed/5k3Zk2pIh0I"
+allowfullscreen>
+</iframe>
+</div>
+</section>
+
+<footer>
+MESSI 🐐 | Not a player. A phenomenon.
+</footer>
+
+</body>
+</html>
