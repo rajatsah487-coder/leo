@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Happy Rose Day 🌹</title>
+  <title>A Promise 🤍</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -15,7 +15,7 @@
 
     body {
       height: 100vh;
-      background: linear-gradient(135deg, #ff416c, #ff4b2b);
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -30,33 +30,33 @@
       padding: 30px 25px;
       text-align: center;
       width: 90%;
-      max-width: 400px;
+      max-width: 420px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.3);
       animation: fadeIn 2s ease;
     }
 
     h1 {
       font-size: 2.2rem;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
-    .rose {
-      font-size: 5rem;
+    .icon {
+      font-size: 4.5rem;
       margin: 20px 0;
-      animation: float 3s ease-in-out infinite;
+      animation: pulse 2.5s ease-in-out infinite;
     }
 
     p {
       font-size: 1.1rem;
-      line-height: 1.6;
-      margin-bottom: 20px;
+      line-height: 1.7;
+      margin-bottom: 22px;
     }
 
     button {
       background: white;
-      color: #ff416c;
+      color: #2575fc;
       border: none;
-      padding: 12px 25px;
+      padding: 12px 28px;
       border-radius: 25px;
       font-size: 1rem;
       cursor: pointer;
@@ -65,12 +65,12 @@
 
     button:hover {
       transform: scale(1.1);
-      background: #ffe6eb;
+      background: #eef3ff;
     }
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-15px); }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.15); }
     }
 
     @keyframes fadeIn {
@@ -88,23 +88,25 @@
 <body>
 
   <div class="card">
-    <h1>Happy Rose Day 🌹</h1>
+    <h1>A Promise 🤍</h1>
 
-    <div class="rose">🌹</div>
+    <div class="icon">🤍</div>
 
     <p>
       Dear <b>Mahi</b>,<br>
-      This rose is for you<br>
-      not just for today,<br>
-      but for every smile you bring 🌸
+      I may not promise perfection,<br>
+      but I promise honesty.<br>
+      I promise presence.<br>
+      I promise to stand by you,<br>
+      in calm days and chaotic nights.
     </p>
 
-    <button onclick="showMessage()">Tap the Rose</button>
+    <button onclick="showPromise()">Tap to Accept</button>
   </div>
 
   <script>
-    function showMessage() {
-      alert("🌹 A virtual rose for you, Mahi.\nSome feelings are best expressed with flowers. 💖");
+    function showPromise() {
+      alert("🤍 This is my promise to you, Mahi.\nNot loud, not temporary, but real.");
     }
   </script>
 
