@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- HEAD -->
+<head>
+  <!-- Title on the tab -->
+  <title>Lionel Messi's Tribute page</title>
+
+  <!-- Metadata -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="Lionel Messi's Tribute Page"/>
+  <meta name="author" content="Oscar Ruben Germade"/>
+  <meta name="keywords" content="Lionel Messi, Leo Messi, Messi"/>
+
+  <!-- Bootstrap files -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Style-->
+  <style>
+    /* Carousel */
+    .item {
+      position: relative;
+    }
+    .blockquote {
+	  position: absolute;
+	  top: 30px;
+	  left: 50px;
+	}
+	.blockquoteText {
+	  color: red;
+	}
+
+	/* Scrollspy and affix */
+	section { /* the element with data-spy="scroll" requires position=relative */
+	  position: relative;
+	}
+	.affix {
+	  top:0;
+	  width: 100%;
+	  z-index: 9999 !important;
+	}
+	#scrollspy {
+	  margin-bottom: 0px;
+	}
+	.affix ~ .container-fluid {
+	  position: relative;
+	  top: 50px;
+	}
+
+	/* Personal information Panel */
+	#infoPanel {
+	  margin-top: 70px;
+	}
+	#panelTitle {
+	  font-size: 30px;
+	  font-weight: bold;
+	}
+	#panelHeading {
+	  background-color: #e6e6e6;
+	}
+	img:hover {
+      box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+	}
+	#messiValue {
+      max-width: 230px;
+	  padding: 10px;
+	  text-align: center;
+	  background-color: #99ccff;
+	  color: red;
+	  font-size: 30px;
+	  border-radius: 10px;
+	  margin: auto;
+	}
+	#messiValue:hover {
+	  border: 2px solid red;
+	}
+	.awards {
+	  margin: 10px;
+	  text-align: center;
+	}
+
+	/* 1st articule */
+	#personalInfo{
+ 	  background-color: blue;
+	}
+
+	/* 2nd article */
+	#biography {
+	  background-color: red;
+	}
+	.biographyColumns {
+	  margin: 70px 0;
+	}
+	#biographyTitle {
+	  position: absolute;
+      top: 20px;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  color: blue;
+	  text-decoration: underline;
+	}
+	#biographyList {
+	  list-style-type: none;
+	  position: absolute;
+	  top: 100px;
+	  color: yellow;
+	  left:20px;
+	  line-height: 200%;
+	  width: 90%;
+	}
+	#biographyAnchor {
+	  color: yellow;
+	}
+	#youngMessi {
+	  opacity: 0.9;
+	}
+	.glyphicon-star {
+	  color: blue;
+	}
+
+	/* 3th article */
+	#stats {
+ 	  background-image: url("pictures/messiStats.png");
+	  background-repeat: no-repeat;
+	  background-attachment: fixed;
+	  background-position: center;
+	  background-size: cover;
+      height: 100%;
+	  width: 100%;
+	  opacity: 0.9;
+	}
+	.statsColumn {
+	  margin: 70px 0;
+	}
+    #barcelonaStats {
+	  font-size: 50px;
+	  color: white;
+	  margin: 0 0 40px 0;
+	  text-align: center;
+	}
+	#argentinaStats {
+	  font-size: 50px;
+	  color: white;
+	  margin: 0 0 40px 0;
+      text-align: center;
+	}
+	.rowStats {
+	  margin: 20px 0;
+	}
+	.containerStats {
+	  border: 1px solid white;
+	  border-radius: 10px;
+	}
+    .headerStats {
+	  color: white;
+	  text-align: center;
+	  border-bottom: 1px solid white;
+      vertical-align: middle;
+	}
+	.containerStats:hover {
+	  border: 2px solid #9fff80;
+	}
+	.bodyStats {
+	  font-size: 60px;
+	  text-align: center;
+	  color: white;
+	  text-shadow: 0 0 3px #FF0000;
+      /*text-shadow: -1px 0 #9fff80, 0 1px #9fff80, 1px 0 #9fff80, 0 -1px #9fff80;*/
+	}
+	.numberStats {
+	  border-color: green;
+	}
+
+	/* 4th article */
+	#achivements {
+	  background-color: #e6e6e6;
+	}
+  </style>
+</head>
+
+<!-- BODY -->
+<body>
+
+<!-- HEADER -->
+  <header>
+    <!-- Create a carousel
+         slide: adding CSS3 transitions and animations
+         data-ride: indicating to start the carousel inmmediately after the page load
+		 id: connecting to the carousel controls -->
+    <div class="carousel slide" id="carouselHeader" data-ride="carousel">
+      <!-- Indicators: are the points available in the center of the pictures
+             data-target: vinculating the indicators with the id of this carousel
+             data-slide-to: indicating the number of indicators
+             active: telling which is the main slide -->
+      <ol class="carousel-indicators">
+        <li data-target="#carouselHeader" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselHeader" data-slide-to="1"></li>
+        <li data-target="#carouselHeader" data-slide-to="2"></li>
+      </ol>
+      <!-- Wrapper for slides
+		   carousel-inner: wrapping all slides
+	       item: specifying the contente of each slide
+		   active: telling which is the main slide -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img class="img-responsive" src="http://as00.epimg.net/futbol/imagenes/2017/03/09/champions/1489091258_934803_1489091498_noticia_normal.jpg" alt="Celebracion contra PSG" style="width: 100%;height: 600px;"/>
+		  <blockquote class="blockquote">
+		    <p class="blockquoteText">"Para mí ver jugar a Messi es un placer. Es como tener un orgasmo. Es un placer increíble"</p>
+		    <footer><cite>Luis Figo (Exfutbolista)</cite></footer>
+		  </blockquote>
+		</div>
+        <div class="item">
+          <img class="img-responsive" src="http://www.lavanguardia.com/r/GODO/LV/p4/WebSite/2017/04/24/Recortada/img_rrodriguez_20170424-141734_imagenes_lv_terceros_pepmorata-kSs-U422014185148DQI-992x558@LaVanguardia-Web.jpg" alt="Celebracion contra el Madrid" style="width: 100%;height: 600px"/>
+		  <blockquote class="blockquote">
+		    <p class="blockquoteText">"El mejor es Messi y el segundo, Messi lesionado"</p>
+		    <footer><cite>Jorge Valdano (Exfutbolista)</cite></footer>
+		  </blockquote>
+		</div>
+        <div class="item">
+          <img class="img-responsive" src="http://www.mundodeportivo.com/r/GODO/MD/p3/Barca/Imagenes/2016/01/17/Recortada/img_jagonzalez_20160112-203317_imagenes_md_terceros_fcb_2016-01-12_messi_oro_43-098-kHHC--572x381@MundoDeportivo-Web.JPG" alt="Sus 5 balones de oro" style="width: 100%;height: 600px;"/>
+		  <blockquote class="blockquote">
+		    <p class="blockquoteText">"Messi es un jugador de Play Station. Las cosas que son imposibles, él las hace posibles"</p>
+		    <footer><cite>Arsene Wenger (Coach)</cite></footer>
+		  </blockquote>
+        </div>
+      </div>
+      <!-- Left and right controls-->
+      <a class="left carousel-control" href="#carouselHeader" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carouselHeader" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </header>
+
+<!-- SECTION -->
+  <!-- Create Scrollable Area
+	   data-spy=scroll: selecting the scrollable area
+	   data-target: the id of navigation bar, which is the content related
+	   data-offset: pixels from top-->
+  <section data-spy="scroll" data-target="#scrollspy" data-offset="50">
+
+<!-- NAVBAR -->
+    <nav class="navbar navbar-default" id="scrollspy" data-spy="affix" data-offset-top="600">
+      <div class="container-fluid">
+        <!-- navbar-header-->
+	    <div class="navbar-header">
+		  <!-- Brand and toggle get grouped for better mobile display -->
+	      <a class="navbar-brand">Lionel Messi's Tribute Page</a>
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavbar">
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+          </button>
+        </div>
+	    <!-- navbar-collapse area: links to the content of each section of the <nav> in the scrollspy -->
+	    <div class="collapse navbar-collapse" id="mainNavbar">
+	      <ul class="nav navbar-nav">
+		    <li><a href="#personalInfo">Personal Information</a></li>
+		    <li><a href="#biography">Biography</a></li>
+		    <li><a href="#stats">Career Statistics</a></li>
+		    <li><a href="#achivements">Achivements</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+<!-- ARTICLE: Personal Information Section of the scrollspy-->
+    <article class="container-fluid" id="personalInfo">
+
+	  <!-- Create panel -->
+      <div class="panel panel-default" id="infoPanel">
+        <div class="panel-heading" id="panelHeading"> <!-- panel heading -->
+          <h6 class="panel-title text-center" id="panelTitle">#10 Leo Messi</h6>
+	    </div>
+	    <!-- panel body -->
+        <div class="panel-body">
+
+		<!--solo indentar desde aqui -->
+            <div class="row"><!-- main row -->
+		      <div class="col-xs-12 col-sm-8 column"><!-- 1st column -->
+			    <div class="row">
+			      <div class="col-xs-12 col-sm-4 thumbnail">
+				    <a href="pictures/messiProfile.jpg" target="_blank"><img class="img-responsive" src="pictures/messiProfile.jpg" alt="Lionel Messi" width="100%" title="Leo Messi in 2016/2017"/></a>
+					<div class="caption" id="messiValue">250 Millions</div>
+                  </div>
+		          <div class="col-xs-12 col-sm-8">
+			        <table class="table table-striped table-responsive">
+                      <tr>
+				        <td>Full Name:</td>
+				        <td>Lionel Andres Messi Cuccitini</td>
+		              </tr>
+                      <tr>
+			            <td>Date of birth:</td>
+				        <td>24/06/1987</td>
+			          </tr>
+                      <tr>
+			            <td>Place of birth:</td>
+				        <td>Rosario</td>
+			          </tr>
+                      <tr>
+			            <td>Country:</td>
+				        <td>Argentina</td>
+			          </tr>
+                      <tr>
+			            <td>Age:</td>
+				        <td>29</td>
+			          </tr>
+                      <tr>
+			            <td>Nacionality:</td>
+				        <td>Argentinan, Spanish</td>
+			          </tr>
+                      <tr>
+			            <td>Position:</td>
+				        <td>Right wing</td>
+			          </tr>
+                      <tr>
+			            <td>Foot:</td>
+			    	    <td>Left</td>
+			          </tr>
+                      <tr>
+			            <td>Agent:</td>
+				        <td>His father</td>
+			          </tr>
+                      <tr>
+                        <td>Provider:</td>
+				        <td>Adidas</td>
+		              </tr>
+                    </table>
+                  </div>
+                </div><!-- End secondary row -->
+		      </div> <!-- End 1st column -->
+		      <div class="col-xs-12 col-sm-4 thumbnail column"> <!-- 2nd column -->
+                <a href="https://www.fcbarcelona.com/" target="_blank"><img class="img-thumbnail img-responsive" src="pictures/fcbShield.png" alt="FCB shield" title="Go to FCB website"/></a>
+			    <div class="caption">
+			      <table class="table table-striped table-responsive">
+				    <tr>
+				      <td>Club:</td>
+				      <td>FC Barcelona</td>
+				    </tr>
+				    <tr>
+				      <td>Country:</td>
+			          <td>Spain</td>
+				    </tr>
+				    <tr>
+			          <td>League:</td>
+			          <td>Liga Santander</td>
+				    </tr>
+				    <tr>
+			          <td>Budget:</td>
+			          <td>500 Millions</td>
+                    </tr>
+                    <tr>
+                      <td>Contract ending:</td>
+				      <td>30/06/2018</td>
+			        </tr>
+                  </table>
+			    </div>
+              </div> <!-- End 2nd column -->
+	        </div><!-- End main row -->
+          </div><!-- End panel body -->
+
+	      <!-- panel footer -->
+          <div class="panel-footer">
+	        <div class="row">
+		      <div class="col-sm-2 awards">
+                <img src="pictures/championsLeague.png" alt="Champions Leagues" title="Champions League"/>
+                <span class="badge">4</span>
+                <img src="pictures/laLiga.png" alt="Spanish League" title="La Liga"/>
+                <span class="badge">8</span>
+              </div>
+		      <div class="col-sm-2 awards">
+                <img src="pictures/laCopa.png" alt="Spanish Cup" title="La Copa"/>
+                <span class="badge">5</span>
+                <img src="pictures/spanishSupercup.png" alt="Spanish Supercup" title="Spanish supercup"/>
+                <span class="badge">7</span>
+			  </div>
+		      <div class="col-sm-2 awards">
+                <img src="pictures/europeSupercup.png" alt="UEFA Supercup" title="UEFA supercup"/>
+                <span class="badge">3</span>
+                <img src="pictures/worldClub.png" alt="FIFA World Club Cup" title="FIFA World Club Cup"/>
+                <span class="badge">3</span>
+			  </div>
+			  <div class="col-sm-2 awards">
+                <img src="pictures/olympicGames.png" alt="Gold Olympic Games Medallist" title="Gold Olympic Games"/>
+                <span class="badge">1</span>
+                <img src="pictures/ballonDor.png" alt="Ballon D'or" title="Ballon D'or"/>
+                <span class="badge">1</span>
+			  </div>
+		      <div class="col-sm-2 awards">
+                <img src="pictures/bestPlayer.png" alt="UEFA Best Player in Europe" title="UEFA Best Player in Europe"/>
+                <span class="badge">3</span>
+		      </div>
+            </div> <!-- End row -->
+	      </div><!-- End footer panel -->
+        </div><!-- End panel -->
+      </article><!-- End personal information -->
+
+  <!-- Biography -->
+  <article class="container-fluid" id="biography">
+    <div class="row">
+      <div class="col-xs-12 col-md-6 biographyColumns"> <!-- 2nd column -->
+	    <img class="img-responsive" id="youngMessi" src="pictures/messiBio.jpg" alt="Young Messi" width="100%" height="auto"/>
+	    <h1 id="biographyTitle">His Biography</h1>
+	    <ul id="biographyList">
+		  <li><span class="glyphicon glyphicon-star"></span> Lionel Andrés Messi was born on 24 June 1987 in Rosario.</li>
+		  <li><span class="glyphicon glyphicon-star"></span> At the age of four he joined local club Grandoli, where he was coached by his father, though his earliest influence as a player came from his maternal grandmother, Celia, who accompanied him to training and matches.</li>
+		  <li><span class="glyphicon glyphicon-star"></span> A lifelong supporter of Newell's Old Boys, Messi joined the Rosario club when he was six years old.</li>
+		  <li><span class="glyphicon glyphicon-star"></span> At age 10, he was diagnosed with a growth hormone deficiency, wich cost around $1000 per month. Newell's and River plate rejected to pay it.</li>
+		  <li><span class="glyphicon glyphicon-star"></span> In September 2010, he did a trial with FC Barcelona, who signed a contract on a napkin.</li>
+		  <li><span class="glyphicon glyphicon-star"></span><a id="biographyAnchor" href="https://en.wikipedia.org/wiki/Lionel_Messi" target="_blank" title="Go to wikipedia"> More in Wikipedia clicking here!!</a>
+		</ul>
+	  </div> <!-- End 2nd column -->
+      <div class="col-xs-12 col-md-6 biographyColumns"> <!-- 1st column -->
+	    <iframe class="embed-responsive-item" width="100%" height="440" src="https://www.youtube.com/embed/rfDTwZbDc10" frameborder="0" allowfullscreen></iframe>
+	  </div> <!-- End 1st column -->
+
+	</div>
+  </article>
+
+  <!-- Stats -->
+  <article class="container-fluid" id="stats">
+    <div class="row"> <!-- Main row-->
+	  <div class="col-xs-12 col-sm-6 statsColumn"> <!-- 1st column-->
+	    <h1 id="barcelonaStats">FC BARCELONA</h1>
+		<div class="row rowStats"> <!-- secondary row 1-->
+		  <div class="col-xs-6 col-sm-3">
+		    <div class="containerStats">
+			  <h3 class="headerStats">GOALS</h3>
+			  <p class="bodyStats">521</p>
+			</div>
+		  </div>
+		  <div class="col-xs-6 col-sm-3">
+		    <div class="containerStats">
+			  <h3 class="headerStats">ASSIST.</h3>
+			  <p class="bodyStats">196</p>
+			</div>
+		  </div>
+		  <div class="col-xs-6 col-sm-3">
+		    <div class="containerStats">
+			  <h3 class="headerStats">TROPHIE</h3>
+			  <p class="bodyStats">30</p>
+			</div>
+		  </div>
+		  <div class="col-xs-6 col-sm-3">
+		    <div class="containerStats">
+			  <h3 class="headerStats">MEDALS</h3>
+			  <p class="bodyStats">13</p>
+			</div>
+		  </div>
+		</div>
+		<div class="row rowStats"> <!-- secondary row 2-->
+		  <div class="col-xs-6 col-sm-3">
+		    <div class="containerStats">
+			  <h3 class="headerStats">GAMES</h3>
+			  <p class="bodyStats">594</p>
+			</div>
+		  </div>
+		  <div class="col-xs-6 col-sm-3">
+		    <div class="containerStats">
+			  <h3 class="headerStats">WON</h3>
+			  <p class="bodyStats">422</p>
+			</div>
+		  </div>
+		  <div class="col-xs-6 col-sm-3">
+		    <div class="containerStats">
+			  <h3 class="headerStats">DRAWS</h3>
+			  <p class="bodyStats">103</p>
+			</div>
+		  </div>
+		  <div class="col-xs-6 col-sm-3">
+		    <div class="containerStats">
+			  <h3 class="headerStats">LOSTS</h3>
+			  <p class="bodyStats">69</p>
+			</div>
+		  </div>
+		</div>
+	  </div><!-- End 1st left col -->
+	  <div class="col-xs-12 col-sm-6 statsColumn"> <!-- 2nd column-->
+	    <h1 id="argentinaStats">ARGENTINA</h1>
+		<div class="row rowStats"> <!-- secondary row 1-->
+		  <div class="col-xs-6 col-sm-3">
+		    <div class="containerStats">
+			  <h3 class="headerStats">GOALS</h3>
+			  <p class="bodyStats">58</p>
+			</div>
+		  </div>
+		  <div class="col-xs-6 col-sm-3">
+		    <div class="containerStats">
+			  <h3 class="headerStats">ASSIST.</h3>
+			  <p class="bodyStats">37</p>
+			</div>
+		  </div>
+		  <div class="col-xs-6 col-sm-3">
+		    <div class="containerStats">
+			  <h3 class="headerStats">TROPHIE</h3>
+			  <p class="bodyStats">1</p>
+			</div>
+		  </div>
+		  <div class="col-xs-6 col-sm-3">
+		    <div class="containerStats">
+			  <h3 class="headerStats">MEDALS</h3>
+			  <p class="bodyStats">3</p>
+			</div>
+		  </div>
+		</div>
+		<div class="row rowStats"> <!-- secondary row 2-->
+		  <div class="col-xs-6 col-sm-3">
+		    <div class="containerStats">
+			  <h3 class="headerStats">GAMES</h3>
+			  <p class="bodyStats">121</p>
+			</div>
+		  </div>
+		  <div class="col-xs-6 col-sm-3">
+		    <div class="containerStats">
+			  <h3 class="headerStats">WON</h3>
+			  <p class="bodyStats">73</p>
+			</div>
+		  </div>
+		  <div class="col-xs-6 col-sm-3">
+		    <div class="containerStats">
+			  <h3 class="headerStats">DRAWS</h3>
+			  <p class="bodyStats">27</p>
+			</div>
+		  </div>
+		  <div class="col-xs-6 col-sm-3">
+		    <div class="containerStats">
+			  <h3 class="headerStats">LOSTS</h3>
+			  <p class="bodyStats">21</p>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div><!-- End main row-->
+  </article>
+
+  <article class="container-fluid" id="achivements">
+    <h6> Barca</h6>
+    <h6> Barca</h6>
+    <h6> Barca</h6>
+    <h6> Barca</h6>
+    <h6> Barca</h6>
+  </article>
+
+
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center">
+  <hr>
+  <p>Written and coded by <a href="https://www.freecodecamp.com/oscarcito100" target="_blank">Oscar Germade Rios</a>.</p>
+</footer>
+
+</body>
+</html>
